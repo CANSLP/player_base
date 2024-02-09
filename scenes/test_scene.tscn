@@ -102,7 +102,7 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_w6yx5")
 
 [node name="MeshInstance3D11" type="MeshInstance3D" parent="geometry"]
-transform = Transform3D(3, 0, 0, 0, 9, 0, 0, 0, 3, 0, 4, 21)
+transform = Transform3D(5, 0, 0, 0, 3, 0, 0, 0, 5, 0, 7, 21)
 mesh = SubResource("BoxMesh_oditj")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("2_xl7fo")
@@ -112,8 +112,19 @@ surface_material_override/0 = ExtResource("2_xl7fo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/MeshInstance3D11/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_w6yx5")
 
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="geometry"]
+transform = Transform3D(3, 0, 0, 0, 6, 0, 0, 0, 3, 0, 2.5, 21)
+mesh = SubResource("BoxMesh_oditj")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("2_xl7fo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/MeshInstance3D19"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/MeshInstance3D19/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w6yx5")
+
 [node name="MeshInstance3D12" type="MeshInstance3D" parent="geometry"]
-transform = Transform3D(1, 0, 0, 0, 9, 0, 0, 0, 1, 7, 4, 21)
+transform = Transform3D(1, 0, 0, 0, 9, 0, 0, 0, 1, 7, 4, 20)
 mesh = SubResource("BoxMesh_oditj")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("2_xl7fo")
@@ -124,7 +135,7 @@ surface_material_override/0 = ExtResource("2_xl7fo")
 shape = SubResource("ConcavePolygonShape3D_w6yx5")
 
 [node name="MeshInstance3D13" type="MeshInstance3D" parent="geometry"]
-transform = Transform3D(1, 0, 0, 0, 9, 0, 0, 0, 1, -7, 4, 21)
+transform = Transform3D(1, 0, 0, 0, 9, 0, 0, 0, 1, -7, 4, 20)
 mesh = SubResource("BoxMesh_oditj")
 skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("2_xl7fo")
@@ -143,6 +154,17 @@ surface_material_override/0 = ExtResource("2_xl7fo")
 [node name="StaticBody3D" type="StaticBody3D" parent="geometry/MeshInstance3D14"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/MeshInstance3D14/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_w6yx5")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="geometry"]
+transform = Transform3D(1, 0, 0, 0, 9, 0, 0, 0, 1, -1.19035e-07, 4, 27)
+mesh = SubResource("BoxMesh_oditj")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("2_xl7fo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="geometry/MeshInstance3D18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="geometry/MeshInstance3D18/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_w6yx5")
 
 [node name="MeshInstance3D15" type="MeshInstance3D" parent="geometry"]
@@ -228,4 +250,4 @@ shape = SubResource("ConcavePolygonShape3D_w6yx5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -6)
 
 [node name="InteractionOrb2" parent="props" instance=ExtResource("3_ypxao")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 22)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 21)

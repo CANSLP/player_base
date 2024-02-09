@@ -14,6 +14,7 @@ func _ready():
 func _process(delta):
 	size += (1-size)*0.5
 	$body.scale = Vector3(1,1,1)*size
+	$body.position.y = sin(Time.get_ticks_msec()*0.0025)*0.1
 
 #called when clicked
 func _clicked(player: Node):

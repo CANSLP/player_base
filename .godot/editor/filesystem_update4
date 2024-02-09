@@ -6,3 +6,4 @@ res://materials/shaders/test_material.gdshader
 res://materials/test_material.tres
 res://scenes/test_scene.tscn
 res://classes/interaction_orb.tscn
+res://scripts/interaction_orb.gd

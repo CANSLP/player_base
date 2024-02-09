@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://cp0q2snacikok"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_e06wh"]
+[ext_resource type="AudioStream" uid="uid://bm7vas4j6606x" path="res://audio/click_in.wav" id="2_ovt5n"]
+[ext_resource type="AudioStream" uid="uid://c8tcu5a3q7rnd" path="res://audio/click_out.wav" id="3_5xlte"]
+[ext_resource type="AudioStream" uid="uid://dw5xmxrkh460m" path="res://audio/jump.wav" id="4_qctkc"]
+[ext_resource type="AudioStream" uid="uid://bvow8nunp2ose" path="res://audio/land.wav" id="5_uyeiu"]
+[ext_resource type="AudioStream" uid="uid://csw07gy13fbvo" path="res://audio/splash_in.mp3" id="6_1md7h"]
+[ext_resource type="AudioStream" uid="uid://cebh4bypevcop" path="res://audio/splash_out.wav" id="7_ot1x2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xrcat"]
+friction = 0.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u16lm"]
+
+[node name="player" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+collision_layer = 2
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+physics_material_override = SubResource("PhysicsMaterial_xrcat")
+linear_damp_mode = 1
+script = ExtResource("1_e06wh")
+
+[node name="collider" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_u16lm")
+
+[node name="camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+current = true
+near = 0.125
+
+[node name="sfx_click_in" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ovt5n")
+
+[node name="sfx_click_out" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5xlte")
+
+[node name="sfx_jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qctkc")
+volume_db = -10.0
+
+[node name="sfx_land" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_uyeiu")
+volume_db = -15.0
+
+[node name="sfx_splash_in" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_1md7h")
+volume_db = -15.0
+
+[node name="sfx_splash_out" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ot1x2")
+volume_db = -20.0

@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cdinswe28e5or"]
+
+[ext_resource type="Shader" path="res://materials/shaders/neutral.gdshader" id="1_gbyii"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_gbyii")
+shader_parameter/color = Vector3(0.25, 0.3, 0.3)

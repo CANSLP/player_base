@@ -1,0 +1,8 @@
+res://classes/player.tscn
+res://materials/shaders/neutral.gdshader
+res://materials/neutral_on.tres
+res://materials/neutral_off.tres
+res://materials/shaders/test_material.gdshader
+res://materials/test_material.tres
+res://scenes/test_scene.tscn
+res://classes/interaction_orb.tscn

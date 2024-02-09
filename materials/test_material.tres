@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ddypinr0fnnqq"]
+
+[ext_resource type="Shader" path="res://materials/shaders/test_material.gdshader" id="1_01fje"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_01fje")
+shader_parameter/color_base = Vector3(0.25, 0.3, 0.3)
+shader_parameter/color_line = Vector3(0.2, 0.25, 0.25)
